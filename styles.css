@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* A simple button with a hover effect */
+.my-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* This is the key line! It tells the browser to animate changes to the background-color and transform properties over 0.3 seconds. */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When the user hovers over the button, change its style */
+.my-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Make the button slightly larger on hover */
+}
+
+/* An animated box that slides in when a class is added */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #28a745;
+  margin: 20px;
+  transform: translateX(-150%); /* Start off-screen to the left */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0; /* Initially hidden */
+}
+CSS Keyframe Animations
+Keyframe animations are for more complex, continuous, or triggered animations that involve multiple steps or states. You define the animation's behavior and then apply it to an element.
+
+CSS
+
+/* styles.css */
+
+/* Define a continuous pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Apply the animation to an element */
+.pulsing-element {
+  width: 50px;
+  height: 50px;
+  background-color: #dc3545;
+  border-radius: 50%;
+  animation: pulse 2s infinite; /* The animation is called "pulse," lasts 2 seconds, and repeats infinitely */
+}
